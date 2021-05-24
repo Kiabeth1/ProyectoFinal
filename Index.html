@@ -1,0 +1,146 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+        <title>Distribuidora de ropa</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+             <script>
+var Bienvenida = "Bienvenidos QR Fashion";
+		alert (Bienvenida);
+ 
+function algoritmo()
+{
+	var genero, origen, talla;
+    var descuento, monto_a_pagar, monto_comprado;
+	
+    monto_comprado = parseFloat (document.formulario1.monto_comprado.value);
+    genero = parseInt (document.formulario1.genero.value);
+    origen = parseInt (document.formulario1.origen.value);
+    talla = parseInt (document.formulario1.talla.value);
+    descuento=0;
+	
+    if(origen==1&&talla==1&&genero==1)
+        descuento=monto_comprado*0.1;
+    if(origen==1&&talla==2&&genero==1)
+        descuento=monto_comprado*0.12;
+    if(origen==1&&talla==3&&genero==1)
+        descuento=monto_comprado*0.15;
+    if(origen==1&&talla==1&&genero==2)
+        descuento=monto_comprado*0.15;
+    if(origen==1&&talla==2&&genero==2)
+        descuento=monto_comprado*0.17;
+    if(origen==1&&talla==3&&genero==2)
+        descuento=monto_comprado*0.2;
+    if(origen==2&&talla==1&&genero==1)
+        descuento=monto_comprado*0.05;
+    if(origen==2&&talla==2&&genero==1)
+        descuento=monto_comprado*0.07;
+    if(origen==2&&talla==3&&genero==1)
+        descuento=monto_comprado*0.1;
+    if(origen==2&&talla==1&&genero==2)
+        descuento=monto_comprado*0.07;
+    if(origen==2&&talla==2&&genero==2)
+        descuento=monto_comprado*0.09;
+    if(origen==2&&talla==3&&genero==2)
+        descuento=monto_comprado*0.12;
+    monto_a_pagar=monto_comprado-descuento;
+    document.formulario1.descuento.value = descuento;
+    document.formulario1.monto_a_pagar.value = monto_a_pagar;
+}
+ 
+        </script>
+    <style type="text/css">
+    body {
+	background-color: #BFBFFF;
+	text-align: center;
+	}
+    </style>
+    </head>
+    <body>
+    
+    <form name="formulario1">
+            <p style="font-family: 'MS Serif', 'New York', serif; font-size: 36px;">
+              <input type="image" name="imageField7" id="imageField7" src="shopping-115857_115812.png">
+            QR Fashion
+            <input type="image" name="imageField8" id="imageField8" src="shopping-115857_115812.png">
+            </p>
+            <table align="center" style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td width="207">
+                            <label for="monto_comprado">
+                              <input type="image" name="imageField" id="imageField" src="cash_icon-icons.com_51090.png">
+                            Ingresa la cantidad total::</label></td>
+                        <td width="199">
+                            <input name="monto_comprado" required step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="genero">
+                              <input type="image" name="imageField2" id="imageField2" src="gender_sex_icon_131294 (1).png">
+                            Selecciona el  genero:</label>
+                        </td>
+                        <td>
+                            <select name="genero" required="required">
+                                <option value="1">Hombres</option>
+                                <option value="2">Mujeres</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="origen">
+                              <input type="image" name="imageField3" id="imageField3" src="environment_120736.png">
+                            Selecciona el valor de origen:</label>
+                        </td>
+                        <td>
+                            <select name="origen" required="required">
+                                <option value="1">Nacional</option>
+                                <option value="2">Importado</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="talla">
+                              <input type="image" name="imageField4" id="imageField4" src="clothing_icon-icons.com_69118.png">
+                            Selecciona la talla:</label>
+                        </td>
+                        <td>
+                            <select name="talla" required="required">
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="descuento">
+                              <input type="image" name="imageField5" id="imageField5" src="shoppaymentorderbuy-09_icon-icons.com_73854.png">
+                              Descuento total::</label>
+                        </td>
+                        <td>
+                            <input name="descuento" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="monto_a_pagar">
+                              <input type="image" name="imageField6" id="imageField6" src="pay_cash_payment_money_dollar_bill_icon_143267.png">
+                              Total a pagar::</label></td>
+                        <td>
+                            <input name="monto_a_pagar" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+              </tbody>
+      </table>
+    </form>
+    </body>
+</html>
